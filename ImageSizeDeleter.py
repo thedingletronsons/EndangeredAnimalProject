@@ -2,9 +2,9 @@
 # It also numerically sorts the animals after deleting some of the images
 
 import os
+import re
 from PIL import Image
 import imagehash
-
 
 def delete_duplicate_images(folder_path):
     # Dictionary to store image hash values
@@ -29,14 +29,6 @@ def delete_duplicate_images(folder_path):
             except Exception as e:
                 print(f"Error processing {filename}: {e}")
 
-
-# Usage example
-folder_path = (r"C:\Users\getan\GitHub\ML\Endangered_Images\Black-footed_Ferret")
-delete_duplicate_images(folder_path)
-animal_name = "Black-footed_Ferret"
-import re
-
-
 def rename_images_sequentially(folder_path, animal_name):
     # Get a list of image files in the folder
     image_files = [f for f in os.listdir(folder_path) if f.endswith('.jpg') or f.endswith('.png')]
@@ -58,4 +50,12 @@ def rename_images_sequentially(folder_path, animal_name):
     print(f"Renamed {len(image_files)} images sequentially in '{folder_path}'.")
 
 
+# Usage example
+folder_path = r"C:\Users\getan\GitHub\ML\Endangered_Images\Eastern_Lowland_Gorilla"
+animal_name = "Eastern_Lowland_Gorilla"
+
+# Delete duplicate images
+delete_duplicate_images(folder_path)
+
+# Rename images sequentially
 rename_images_sequentially(folder_path, animal_name)

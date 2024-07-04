@@ -8,8 +8,7 @@ from googleapiclient.discovery import build
 API_KEY = 'AIzaSyAAZh0Gj7FLtkGsC_EkBwrAqqSubRNKzeQ'
 CSE_ID = '3048a6d7aa0fe4939'
 
-
-def get_animal_images_google(animal_name, save_root_dir, max_images=150):
+def get_animal_images_google(animal_name, save_root_dir, max_images=200):
     # Create directory path for the current animal
     animal_dir = os.path.join(save_root_dir, animal_name.replace(' ', '_'))
 
@@ -54,8 +53,10 @@ def get_animal_images_google(animal_name, save_root_dir, max_images=150):
                 image_url = item['link']
                 print(f"Downloading image: {image_url}")
 
-                # Generate filename
-                image_filename = f"{animal_name}_{existing_images + image_count + 1}.jpg"
+                # Calculate the required number of digits for zero-padding
+                num_digits = len(str(max_images))
+                # Generate filename with zero-padding
+                image_filename = f"{animal_name}_{str(existing_images + image_count + 1).zfill(num_digits)}.jpg"
                 image_path = os.path.join(animal_dir, image_filename)
 
                 try:
@@ -74,9 +75,11 @@ def get_animal_images_google(animal_name, save_root_dir, max_images=150):
         if 'queries' in res and 'nextPage' not in res['queries']:
             break
 
+    print(f"Downloaded {image_count} additional images for '{animal_name}'.")
 
 # Usage example
-save_root_dir = r'C:\Users\getan\GitHub\ML\Endangered_Images'
+folder_path = (r"C:\Users\getan\GitHub\ML\Endangered_Images")
+
 animal = 'Bonobo'
 
-get_animal_images_google(animal, save_root_dir, max_images = 150)
+get_animal_images_google(animal, save_root_dir, max_images=200)
