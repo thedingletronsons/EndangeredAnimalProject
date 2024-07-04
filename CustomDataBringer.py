@@ -5,11 +5,11 @@ import requests
 from googleapiclient.discovery import build
 
 # Google API key and Custom Search Engine ID
-API_KEY = 'AIzaSyDMWbjC99FSLxRiAJfjI6AlBJ9TlxFSqFE'
+API_KEY = 'AIzaSyAAZh0Gj7FLtkGsC_EkBwrAqqSubRNKzeQ'
 CSE_ID = '3048a6d7aa0fe4939'
 
 
-def get_animal_images_google(animal_name, save_root_dir, max_images=200):
+def get_animal_images_google(animal_name, save_root_dir, max_images=150):
     # Create directory path for the current animal
     animal_dir = os.path.join(save_root_dir, animal_name.replace(' ', '_'))
 
@@ -29,7 +29,7 @@ def get_animal_images_google(animal_name, save_root_dir, max_images=200):
     service = build('customsearch', 'v1', developerKey=API_KEY)
 
     # Modify query for "Amur Leopard"
-    query = "Endangered African Wild Dog in the wild in its natural habitat photos"
+    query = "Bonobo in the wild Africa"
 
     # Number of images downloaded
     image_count = 0
@@ -37,9 +37,9 @@ def get_animal_images_google(animal_name, save_root_dir, max_images=200):
     # Perform multiple requests to fetch more than 10 images
     while image_count < additional_images_needed:
         # Calculate start index for pagination (within range 1-100)
-        start_index = (image_count % 100) + 1
-        # Calculate offset for results (number of previous full sets of 100)
-        offset = (image_count // 100) * 100
+        start_index = (image_count % 10) + 1
+        # Calculate offset for results (number of previous full sets of 10)
+        offset = (image_count // 10) * 10
 
         # Execute the search request
         res = service.cse().list(q=query, cx=CSE_ID, searchType='image', start=start_index + offset).execute()
@@ -77,6 +77,6 @@ def get_animal_images_google(animal_name, save_root_dir, max_images=200):
 
 # Usage example
 save_root_dir = r'C:\Users\getan\GitHub\ML\Endangered_Images'
-animal = 'African_Wild_Dog'
+animal = 'Bonobo'
 
-get_animal_images_google(animal, save_root_dir, max_images = 200)
+get_animal_images_google(animal, save_root_dir, max_images = 150)
