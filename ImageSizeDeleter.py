@@ -31,9 +31,9 @@ def delete_duplicate_images(folder_path):
 
 
 # Usage example
-folder_path = (r"C:\Users\getan\GitHub\ML\Endangered_Images\Bonobo")
+folder_path = (r"C:\Users\getan\GitHub\ML\Endangered_Images\Black-footed_Ferret")
 delete_duplicate_images(folder_path)
-animal_name = "Bonobo"
+animal_name = "Black-footed_Ferret"
 import re
 
 
