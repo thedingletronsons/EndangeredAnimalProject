@@ -59,8 +59,8 @@ def rename_images_sequentially(folder_path, animal_name):
 
 
 # Usage example
-folder_path = r"C:\Users\getan\GitHub\ML\Endangered_Images\Green_Turtle"
-animal_name = "Green_Turtle"
+folder_path = r"C:\Users\getan\GitHub\ML\Endangered_Images\Asian_Elephant"
+animal_name = "Asian_Elephant"
 
 # Delete duplicate images
 """delete_duplicate_images(folder_path)"""
