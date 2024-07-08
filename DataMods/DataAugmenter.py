@@ -83,7 +83,7 @@ def add_noise(image):
     return Image.fromarray(noisy_image)
 
 # Usage example
-folder_path = r"C:\Users\getan\GitHub\ML\Endangered_Images\Giant_Panda"
+folder_path = r"C:\Users\getan\GitHub\ML\Endangered_Images\Chinese_Giant_Salamander"
 
 # Augment images in the specified folder to reach a total of 500 images
 augment_images_in_folder_random(folder_path, target_total=500)

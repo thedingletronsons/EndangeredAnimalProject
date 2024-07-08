@@ -29,7 +29,7 @@ def get_animal_images_google(animal_name, save_root_dir, max_images=300):
     service = build('customsearch', 'v1', developerKey=API_KEY)
 
     # Modify query for every species
-    query = ("Endangered Black Rhino in the wild photos")
+    query = ("Chinese Giant Salamanders in their habitat")
 
     # Number of images downloaded
     image_count = 0
@@ -78,6 +78,6 @@ def get_animal_images_google(animal_name, save_root_dir, max_images=300):
 
 # Usage example
 save_root_dir = r'C:\Users\getan\GitHub\ML\Endangered_Images'
-animal = 'Black_Rhino'
+animal = 'Chinese_Giant_Salamander'
 
 get_animal_images_google(animal, save_root_dir, max_images = 300)

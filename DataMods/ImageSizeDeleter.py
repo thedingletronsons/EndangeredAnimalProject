@@ -7,7 +7,7 @@ from PIL import Image
 import imagehash
 
 # please add triple quotes to the delete duplicate images function and the calling place when renaming augmented images
-"""def delete_duplicate_images(folder_path):
+def delete_duplicate_images(folder_path):
     # Dictionary to store image hash values
     hash_dict = {}
 
@@ -28,8 +28,7 @@ import imagehash
                     # If the hash does not exist, add it to the dictionary
                     hash_dict[image_hash] = filename
             except Exception as e:
-                print(f"Error processing {filename}: {e}")"""
-
+                print(f"Error processing {filename}: {e}")
 def rename_images_sequentially(folder_path, animal_name):
     # Get a list of image files in the folder
     image_files = [f for f in os.listdir(folder_path) if f.endswith('.jpg') or f.endswith('.png')]
@@ -59,11 +58,11 @@ def rename_images_sequentially(folder_path, animal_name):
 
 
 # Usage example
-folder_path = r"C:\Users\getan\GitHub\ML\Endangered_Images\Asian_Elephant"
-animal_name = "Asian_Elephant"
+folder_path = r"C:\Users\getan\GitHub\ML\Endangered_Images\Chinese_Giant_Salamander"
+animal_name = "Chinese_Giant_Salamander"
 
 # Delete duplicate images
-"""delete_duplicate_images(folder_path)"""
+# delete_duplicate_images(folder_path)
 
 # Rename images sequentially
 rename_images_sequentially(folder_path, animal_name)
