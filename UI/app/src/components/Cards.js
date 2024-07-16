@@ -35,13 +35,13 @@ function Cards() {
               src='/images/Axolotl.jpg'
               text='Axolotl'
               label='Photo by Amandasofiarana, Creative Commons Attribution-Share Alike 4.0 License'
-              path='/sign-up'
+              path='/DataBase'
             />
             <CardItem
               src='/images/Green_Turtle.jpg'
               text='Green Turtle'
               label='Photo by Brocken Inaglory, Creative Commons Attribution-Share Alike 3.0 License'
-              path='/sign-up'
+              path='/DataBase'
             />
           </ul>
         </div>
