@@ -1,7 +1,6 @@
 import React from 'react';
 import './Footer.css';
 import { Button } from './Button';
-import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -42,30 +41,42 @@ function Footer() {
         <div className='social-media-wrap'>
           <small className='website-rights'>Endangered Animals © 2024</small>
           <div className='social-icons'>
-            <Link
+            <a
               className='social-icon-link facebook'
-              to='/'
+              href='https://www.facebook.com'
               target='_blank'
+              rel='noopener noreferrer'
               aria-label='Facebook'
             >
-              <i className="fab fa-facebook-square" />
-            </Link>
-            <Link
+              <i className="fa-brands fa-facebook"/>
+            </a>
+            <a
               className='social-icon-link instagram'
-              to='/'
+              href='https://www.instagram.com'
               target='_blank'
+              rel='noopener noreferrer'
               aria-label='Instagram'
             >
-              <i className='fab fa-instagram-square' />
-            </Link>
-            <Link
+              <i className='fa-brands fa-instagram'/>
+            </a>
+            <a
               className='social-icon-link linkedin'
-              to='/'
+              href='https://www.linkedin.com'
               target='_blank'
+              rel='noopener noreferrer'
               aria-label='LinkedIn'
             >
-              <i className='fab fa-linkedin' />
-            </Link>
+              <i className='fa-brands fa-linkedin' />
+            </a>
+            <a
+              className='social-icon-link discord'
+              href='https://www.discord.com'
+              target='_blank'
+              rel='noopener noreferrer'
+              aria-label='Discord'
+            >
+              <i className='fa-brands fa-discord' />
+            </a>
           </div>
         </div>
       </section>
