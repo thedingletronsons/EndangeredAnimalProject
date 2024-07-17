@@ -29,7 +29,7 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            Endangered Database
+            Endangered DB
           </Link>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
@@ -39,7 +39,7 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link to='/DataBase' className='nav-links' onClick={closeMobileMenu}>
-                DataBase
+                Database
               </Link>
             </li>
             <li className='nav-item'>
