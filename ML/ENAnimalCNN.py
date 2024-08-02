@@ -85,8 +85,8 @@ def train_and_save_cnn_model():
             f'Epoch [{epoch + 1}/{epochs}], Loss: {running_loss / len(train_loader):.4f}, Val Loss: {val_loss / len(val_loader):.4f}, Accuracy: {correct / total:.4f}')
 
     # Save the model
-    torch.save(model.state_dict(), 'C:/Users/getan/GitHub/ML/ENAnimalCNN.pth')
-    tqdm.write("CNN model saved to C:/Users/getan/GitHub/ML/ENAnimalCNN.pth")
+    torch.save(model.state_dict(), 'C:/Users/getan/GitHub/ML/ENAnimalCNN.pt')
+    tqdm.write("CNN model saved to C:/Users/getan/GitHub/ML/ENAnimalCNN.pt")
 
 
 train_and_save_cnn_model()

@@ -1,10 +1,11 @@
 .cards {
   padding: 4rem;
-  background: #fff;
+  background: #2e4648;
 }
 
 h1 {
   text-align: center;
+  color: #d4e2e7;
 }
 
 .cards__container {
@@ -30,6 +31,9 @@ h1 {
   flex: 1;
   margin: 0 1rem;
   border-radius: 10px;
+  background-color: #294a2b; /* Light beige background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow */
+  overflow: hidden; /* Make sure the content fits within the rounded corners */
 }
 
 .cards__item__link {
@@ -62,11 +66,11 @@ h1 {
   bottom: 0;
   margin-left: 10px;
   padding: 6px 8px;
-  max-width: calc((100%) - 60px);
+  max-width: calc((100%) - 30px);
   font-size: 10px;
   font-weight: 700;
-  color: #fff;
-  background-color: #1f98f4;
+  color: #b6b4aa;
+  background-color: #5d8c64;
   box-sizing: border-box;
 }
 
@@ -90,11 +94,12 @@ h1 {
 }
 
 .cards__item__info {
-  padding: 30px 75px 30px;
+  padding: 20px; /* Adjust the padding as needed */
+  color: #2c3e50; /* Dark text color for better readability */
 }
 
 .cards__item__text {
-  color: #252e48;
+  color: #84ba8e;
   font-size: 18px;
   line-height: 24px;
 }

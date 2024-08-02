@@ -74,8 +74,8 @@ def train_and_save_deit_model():
         tqdm.write(f'Epoch [{epoch+1}/{epochs}], Loss: {running_loss/len(train_loader):.4f}, Val Loss: {val_loss/len(val_loader):.4f}, Accuracy: {correct/total:.4f}')
 
     # Save the model
-    torch.save(model.state_dict(), 'C:/Users/getan/GitHub/ML/ENAnimalDIET.pth')
-    tqdm.write("DeiT model saved to C:/Users/getan/GitHub/ML/ENAnimalDEIT.pth")
+    torch.save(model.state_dict(), 'C:/Users/getan/GitHub/ML/ENAnimalDIET.pt')
+    tqdm.write("DeiT model saved to C:/Users/getan/GitHub/ML/ENAnimalDEIT.pt")
 
 
 train_and_save_deit_model()
